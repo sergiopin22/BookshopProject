@@ -18,22 +18,21 @@ import lombok.Data;
 @Table(name = "book")
 public class Book {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id // esta es la llave primaria
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //asignar valor unico a cada registro nuevo en la database
     private int id;
     @NotNull
     @NotBlank
     private String title;
     private String description;
-    private int id_author;
     private String category;
     private Double price;
     private String isbn;
     private int pages;
     private LocalDate publication_date;
-    
-    @ManyToOne
-    @JoinColumn(name = "id_author")
+
+    @ManyToOne //Muchos a uno
+    @JoinColumn(name = "id_author") //la column id_author va hacer la foreign key para relacionarse con la tabla autores
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Author author;
 
