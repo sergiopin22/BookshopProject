@@ -14,7 +14,7 @@
 	<name>bookshopProyect</name>
 	<description>App Fullstack Bookshop with Springboot   Mysql</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

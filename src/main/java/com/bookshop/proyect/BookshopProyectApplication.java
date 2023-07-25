@@ -9,5 +9,4 @@ public class BookshopProyectApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(BookshopProyectApplication.class, args);
 	}
-
 }
